@@ -33,7 +33,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
   String _display = '0';
   bool _hasResult = false;
 
-  bool _isOperator(String value) => '+-*/'.contains(value);
+  bool _isOperator(String value) => '+-*/%'.contains(value);
 
   void _press(String value) {
     setState(() {
@@ -101,7 +101,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
   @override
   Widget build(BuildContext context) {
     const buttons = [
-      ['7', '8', '9', '/'],
+      ['7', '8', '9', '/', '%'],
       ['4', '5', '6', '*'],
       ['1', '2', '3', '-'],
       ['C', '0', '=', '+'],
